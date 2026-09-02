@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informativa sulla privacy — SacketChatty</title>
+<meta name="description" content="Informativa sulla privacy di SacketChatty. Lo sviluppatore non gestisce server e non riceve dati degli utenti.">
+<style>
+  :root {
+    --bg: #0f1115;
+    --surface: #171a21;
+    --border: #262b36;
+    --text: #e8eaed;
+    --muted: #9aa3b2;
+    --accent: #6ea8fe;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 96px; }
+  h1 { font-size: 1.8rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.15rem; margin: 40px 0 12px; letter-spacing: -0.01em; }
+  h3 { font-size: 1rem; margin: 24px 0 8px; color: var(--muted); font-weight: 600; }
+  p { margin: 0 0 16px; }
+  ul { margin: 0 0 16px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 40px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 64px 0 48px; }
+  .lang { color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  code {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 1px 6px; border-radius: 5px; font-size: 0.9em;
+  }
+  .nav { margin-bottom: 32px; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="nav"><a href="index.html">← SacketChatty</a></p>
+
+<h1>Informativa sulla privacy</h1>
+<p class="meta">SacketChatty · in vigore dal 2 settembre 2026</p>
+
+<div class="card">
+  <p><strong>In breve:</strong> SacketChatty non ha un servizio centrale. Chi
+  sviluppa l'app non gestisce alcun server, non riceve i tuoi messaggi e non
+  raccoglie alcun dato che ti riguardi. Non ci sono analitiche, pubblicità né
+  tracciamento.</p>
+</div>
+
+<h2>1. Chi tratta i tuoi dati</h2>
+<p>SacketChatty è sviluppata da <strong>Francesco</strong> ("lo sviluppatore"),
+persona fisica.</p>
+<p>L'applicazione viene distribuita <strong>senza alcun server</strong>. Per usarla
+devi inserire l'indirizzo e la chiave d'accesso di un server, che gestisci tu o
+qualcuno di cui ti fidi. Di conseguenza:</p>
+<ul>
+  <li>lo sviluppatore <strong>non è titolare del trattamento</strong> dei tuoi
+  messaggi o dei tuoi dati d'uso, perché non li riceve e non ha alcun modo di
+  accedervi;</li>
+  <li>il titolare del trattamento è <strong>chi gestisce il server</strong> a cui
+  ti colleghi. Se il server è tuo, sei tu.</li>
+</ul>
+
+<h2>2. Dati raccolti dallo sviluppatore</h2>
+<p><strong>Nessuno.</strong> L'applicazione non invia allo sviluppatore alcuna
+informazione: né messaggi, né contatti, né metadati, né identificativi, né
+statistiche d'uso.</p>
+
+<h3>Assenza di analitiche e tracciamento</h3>
+<p>L'app non contiene strumenti di analisi, reti pubblicitarie o tecnologie di
+tracciamento. Non partecipa a scambi di dati con terze parti e non profila gli
+utenti. L'unica libreria di terze parti con codice nativo è quella usata per il
+trasporto Tor.</p>
+
+<h3>Diagnostica degli arresti anomali</h3>
+<p>Il codice include un modulo facoltativo di segnalazione degli arresti anomali,
+che <strong>è disattivato</strong> nelle versioni distribuite: senza una
+configurazione esplicita il modulo resta completamente inerte e non invia nulla.
+Se in futuro venisse attivato, questa informativa verrà aggiornata prima del
+rilascio.</p>
+
+<h2>3. Dati che restano sul tuo dispositivo</h2>
+<p>Questi dati non lasciano mai il tuo telefono se non nei modi descritti al
+punto 4:</p>
+<ul>
+  <li><strong>Chiavi crittografiche private</strong> (identità, chiavi di sessione
+  Signal) e credenziali di accesso, conservate nel Keychain di sistema;</li>
+  <li><strong>Configurazione del server</strong>: indirizzo, porta e chiave
+  d'accesso, anch'essi nel Keychain;</li>
+  <li><strong>Cronologia delle conversazioni e allegati</strong>, in una cache
+  locale cifrata;</li>
+  <li><strong>Un identificativo di dispositivo</strong> generato dall'app. Serve
+  esclusivamente al protocollo di cifratura per distinguere i tuoi dispositivi
+  fra loro quando usi più device. Non è un identificativo pubblicitario, non
+  viene condiviso con terzi e non consente di tracciarti fra applicazioni
+  diverse.</li>
+</ul>
+<p>Eliminando l'app o usando la funzione di eliminazione dell'account, questi dati
+vengono rimossi dal dispositivo.</p>
+
+<h2>4. Dati trasmessi al server</h2>
+<p>Quando usi l'app, al server che hai configurato arrivano:</p>
+<ul>
+  <li><strong>i messaggi, cifrati end-to-end</strong> con il protocollo Signal
+  (double ratchet). Il server li inoltra e li conserva in attesa di consegna, ma
+  <strong>non può leggerne il contenuto</strong>: non possiede le chiavi;</li>
+  <li><strong>le chiavi pubbliche</strong> necessarie ad avviare le conversazioni
+  cifrate;</li>
+  <li><strong>il tuo nome utente</strong> e i dati minimi di instradamento
+  (mittente, destinatario, momento dell'invio), necessari a consegnare i
+  messaggi;</li>
+  <li><strong>gli allegati, cifrati</strong>, con le stesse garanzie dei messaggi.</li>
+</ul>
+<p>Il collegamento avviene attraverso <strong>Tor</strong>: il server non vede il
+tuo indirizzo IP.</p>
+<p>La conservazione, la cancellazione e la sicurezza di questi dati dipendono da
+chi gestisce il server. Per esercitare i tuoi diritti su di essi devi rivolgerti
+a quella persona.</p>
+
+<h2>5. Segnalazioni di abusi</h2>
+<p>L'app consente di segnalare un utente e di bloccarlo. Una segnalazione invia al
+server la categoria scelta e l'identificativo dell'utente segnalato.</p>
+<p>Poiché i messaggi sono cifrati end-to-end, <strong>nessun contenuto viene
+allegato a una segnalazione</strong> a meno che tu non lo scelga esplicitamente,
+con un consenso separato e mai preselezionato. Allegare un estratto significa
+renderlo leggibile a chi gestisce il server: l'app te lo dice prima di procedere.</p>
+
+<h2>6. I tuoi diritti</h2>
+<p>Il Regolamento (UE) 2016/679 (GDPR) ti riconosce il diritto di accedere ai tuoi
+dati, rettificarli, cancellarli, limitarne il trattamento, opporti e ottenerne la
+portabilità.</p>
+<p>Poiché lo sviluppatore non detiene alcun tuo dato, <strong>queste richieste
+vanno rivolte a chi gestisce il server</strong> che usi. Se il server è tuo, i
+dati sono già interamente sotto il tuo controllo. Puoi in ogni momento eliminare
+il tuo account dall'app e cancellare tutti i dati locali disinstallandola.</p>
+
+<h2>7. Minori</h2>
+<p>L'applicazione non è destinata a minori di 16 anni e non raccoglie
+consapevolmente dati che li riguardino.</p>
+
+<h2>8. Modifiche</h2>
+<p>Eventuali modifiche a questa informativa saranno pubblicate su questa pagina
+con una nuova data di entrata in vigore. Le modifiche sostanziali saranno
+segnalate anche nelle note di rilascio dell'app.</p>
+
+<h2>9. Contatti</h2>
+<p>Per domande su questa informativa o per segnalazioni di sicurezza:
+<a href="mailto:SUPPORT_EMAIL">SUPPORT_EMAIL</a></p>
+
+<hr>
+
+<p class="lang">English</p>
+<h1>Privacy Policy</h1>
+<p class="meta">SacketChatty · effective 2 September 2026</p>
+
+<div class="card">
+  <p><strong>In short:</strong> SacketChatty has no central service. The developer
+  operates no server, never receives your messages, and collects no data about
+  you. There are no analytics, no advertising and no tracking.</p>
+</div>
+
+<h2>1. Who processes your data</h2>
+<p>SacketChatty is developed by <strong>Francesco</strong> ("the developer"), an
+individual.</p>
+<p>The app ships <strong>with no server</strong>. To use it you must enter the
+address and access key of a server that you, or someone you trust, operate.
+Therefore the developer is <strong>not a data controller</strong> for your
+messages or usage data — they are never received and cannot be accessed. The
+controller is <strong>whoever operates the server</strong> you connect to. If it
+is your server, that is you.</p>
+
+<h2>2. Data collected by the developer</h2>
+<p><strong>None.</strong> The app sends the developer no information whatsoever:
+no messages, contacts, metadata, identifiers or usage statistics.</p>
+<p>The app contains no analytics tools, advertising networks or tracking
+technologies, and does not participate in any data sharing with third parties.
+The only third-party native library is the one used for Tor transport. An
+optional crash-reporting module exists in the codebase but is <strong>disabled</strong>
+in distributed builds and ships completely inert.</p>
+
+<h2>3. Data that stays on your device</h2>
+<ul>
+  <li><strong>Private cryptographic keys</strong> and access credentials, in the
+  system Keychain;</li>
+  <li><strong>Server configuration</strong> — address, port and access key — also
+  in the Keychain;</li>
+  <li><strong>Conversation history and attachments</strong>, in an encrypted local cache;</li>
+  <li><strong>A device identifier</strong> generated by the app, used solely by the
+  encryption protocol to distinguish your own devices when you use more than one.
+  It is not an advertising identifier, is not shared with third parties, and
+  cannot be used to track you across apps.</li>
+</ul>
+<p>Deleting the app, or using the in-app account deletion, removes this data from
+the device.</p>
+
+<h2>4. Data sent to the server</h2>
+<p>The server you configure receives your <strong>end-to-end encrypted messages</strong>
+(Signal double ratchet — the server holds no keys and cannot read them), the
+<strong>public keys</strong> needed to establish encrypted conversations, your
+<strong>username</strong> and the minimal routing data needed for delivery
+(sender, recipient, timestamp), and <strong>encrypted attachments</strong>.
+The connection is made over <strong>Tor</strong>, so the server does not see your
+IP address.</p>
+<p>Retention, deletion and security of this data are determined by whoever operates
+that server, and requests concerning it must be addressed to them.</p>
+
+<h2>5. Abuse reports</h2>
+<p>You can report and block users. A report sends the server the chosen category and
+the reported user's identifier. Because messages are end-to-end encrypted,
+<strong>no message content is attached to a report</strong> unless you explicitly
+choose to attach it, through a separate and never pre-selected consent. The app
+warns you that doing so makes that excerpt readable to the server operator.</p>
+
+<h2>6. Your rights</h2>
+<p>Under Regulation (EU) 2016/679 (GDPR) you have the rights of access,
+rectification, erasure, restriction, objection and portability. Because the
+developer holds none of your data, <strong>these requests must be directed to the
+operator of the server you use</strong>. If that server is yours, the data is
+already entirely under your control. You can delete your account from within the
+app at any time, and remove all local data by uninstalling it.</p>
+
+<h2>7. Children</h2>
+<p>The app is not directed at children under 16 and does not knowingly collect
+their data.</p>
+
+<h2>8. Changes</h2>
+<p>Changes to this policy will be published on this page with a new effective date.
+Material changes will also be noted in the app's release notes.</p>
+
+<h2>9. Contact</h2>
+<p>For questions about this policy or for security reports:
+<a href="mailto:SUPPORT_EMAIL">SUPPORT_EMAIL</a></p>
+
+</div>
+</body>
+</html>

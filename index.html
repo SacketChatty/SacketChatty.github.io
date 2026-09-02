@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SacketChatty</title>
+<meta name="description" content="Messaggistica cifrata end-to-end, su server che gestisci tu.">
+<style>
+  :root {
+    --bg: #0f1115;
+    --surface: #171a21;
+    --border: #262b36;
+    --text: #e8eaed;
+    --muted: #9aa3b2;
+    --accent: #6ea8fe;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 64px 24px 96px; }
+  header { margin-bottom: 48px; }
+  h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); font-size: 1.05rem; margin: 0; }
+  h2 { font-size: 1.15rem; margin: 40px 0 12px; letter-spacing: -0.01em; }
+  p { margin: 0 0 16px; }
+  ul { margin: 0 0 16px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 64px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.9rem;
+  }
+  .en { color: var(--muted); font-size: 0.95rem; }
+  code {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 1px 6px; border-radius: 5px; font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>SacketChatty</h1>
+  <p class="tagline">Messaggistica cifrata end-to-end, su un server che gestisci tu.</p>
+</header>
+
+<p>SacketChatty è un'applicazione di messaggistica privata. Non esiste un servizio
+centrale: ogni utente si collega a un proprio server, il cui indirizzo e la cui
+chiave d'accesso inserisce al primo avvio.</p>
+
+<h2>Come funziona</h2>
+<ul>
+  <li>I messaggi sono cifrati end-to-end con il protocollo <strong>Signal (double ratchet)</strong>. Nemmeno chi gestisce il server può leggerli.</li>
+  <li>Il traffico passa da <strong>Tor</strong>: l'app raggiunge il server come hidden service.</li>
+  <li>Chiavi private e credenziali restano nel <strong>Keychain</strong> del dispositivo.</li>
+  <li>Nessuna pubblicità, nessuna analitica, nessun tracciamento.</li>
+</ul>
+
+<h2>Sicurezza e segnalazioni</h2>
+<p>L'app include la segnalazione degli abusi (spam, molestie, contenuto illegale,
+altro), il blocco degli utenti con elenco gestibile, e l'eliminazione completa
+dell'account. Poiché i contenuti sono cifrati end-to-end, nessun messaggio viene
+mai allegato a una segnalazione senza un consenso esplicito e separato di chi
+segnala.</p>
+
+<div class="card">
+  <p><strong>Privacy</strong> — Chi sviluppa l'app non gestisce alcun server e non
+  riceve alcun dato degli utenti. I dettagli sono nell'<a href="privacy.html">informativa
+  sulla privacy</a>.</p>
+</div>
+
+<h2>Supporto</h2>
+<p>Per assistenza, segnalazioni di sicurezza o richieste relative ai tuoi dati:
+<a href="mailto:SUPPORT_EMAIL">SUPPORT_EMAIL</a></p>
+
+<footer>
+  <p class="en"><strong>English</strong> — SacketChatty is an end-to-end encrypted
+  messaging app for self-hosted, private communication. There is no central service:
+  each user connects to a server they run themselves. Messages are encrypted with the
+  Signal double ratchet protocol and routed over Tor. The developer operates no server
+  and receives no user data. No ads, no analytics, no tracking. See the
+  <a href="privacy.html">privacy policy</a>.</p>
+  <p>© 2026 Francesco</p>
+</footer>
+
+</div>
+</body>
+</html>
