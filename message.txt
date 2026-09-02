@@ -1,0 +1,22 @@
+I am an independent developer submitting SacketChatty, an end-to-end encrypted
+messaging app for private, self-hosted communication.
+
+How it works: the app ships with no server. Each user connects to a backend
+they run themselves, entering its address and access key on first launch.
+I do not operate any server, and I never receive user messages, contacts,
+metadata or any other data. Message content is end-to-end encrypted with the
+Signal double ratchet protocol; the server operator cannot read it either.
+
+On moderation and safety, since I know this matters for your obligations as a
+distributor: the app already ships with in-app abuse reporting (categorised as
+spam, harassment, illegal content, other), user blocking with a managed block
+list, and full account deletion. Reports are rate-limited server-side.
+Because content is end-to-end encrypted, no message is ever attached to a
+report unless the reporting user explicitly and separately consents.
+
+The app contains no analytics, no advertising, no tracking, and no third-party
+SDKs other than the Tor library used for transport. Crash reporting is present
+in the codebase but disabled by default and ships inactive.
+
+I am happy to provide a demo server and test credentials so your team can
+evaluate the app end to end. Please let me know if you need anything further.
