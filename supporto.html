@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supporto — SacketChatty</title>
+<meta name="description" content="Assistenza per SacketChatty: come collegarsi a un server, cosa fare quando la connessione non parte, come segnalare un problema.">
+<style>
+  :root {
+    --bg: #0f1115;
+    --surface: #171a21;
+    --border: #262b36;
+    --text: #e8eaed;
+    --muted: #9aa3b2;
+    --accent: #6ea8fe;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 96px; }
+  h1 { font-size: 1.8rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.15rem; margin: 40px 0 12px; letter-spacing: -0.01em; }
+  h3 { font-size: 1rem; margin: 24px 0 8px; color: var(--muted); font-weight: 600; }
+  p { margin: 0 0 16px; }
+  ul { margin: 0 0 16px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 40px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 64px 0 48px; }
+  .lang { color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  code {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 1px 6px; border-radius: 5px; font-size: 0.9em;
+  }
+  .nav { margin-bottom: 32px; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="nav"><a href="index.html">← SacketChatty</a></p>
+
+<h1>Supporto</h1>
+<p class="meta">Come far funzionare l'app, e cosa fare quando non funziona.</p>
+
+<h2>Serve un server</h2>
+<p>SacketChatty non ha un servizio centrale a cui iscriversi: si collega al server
+che indichi tu. Al primo avvio chiede tre cose, che ti dà chi amministra quel
+server:</p>
+<ul>
+  <li>l'<strong>indirizzo</strong>, che finisce in <code>.onion</code>;</li>
+  <li>la <strong>porta</strong>;</li>
+  <li>la <strong>chiave di accesso</strong>, che inizia per <code>descriptor:x25519:</code>.</li>
+</ul>
+<p>Senza queste tre informazioni l'app non ha nessun posto dove collegarsi. Non è
+un difetto: è il motivo per cui nessuno, a parte chi gestisce il server, sa che
+quel server esiste.</p>
+
+<h2>La prima connessione è lenta</h2>
+<p>Aprendo l'app la prima volta possono passare fino a un minuto prima che
+compaia la schermata di accesso. In quel tempo Tor scarica l'elenco dei nodi e
+costruisce i circuiti. Succede una volta sola: le aperture successive sono
+molto più rapide, perché quell'elenco resta salvato sul dispositivo.</p>
+
+<h2>Quando qualcosa non va</h2>
+
+<h3>La rotella gira e non si collega</h3>
+<p>Quasi sempre è la rete. Passa da Wi-Fi a rete mobile o viceversa, poi chiudi
+l'app dal selettore delle app aperte e riaprila. Se il telefono è appena uscito
+da un lungo periodo bloccato, l'app impiega qualche secondo a ricostruire il
+collegamento: è normale.</p>
+
+<h3>Il messaggio resta senza «Consegnato»</h3>
+<p>Il destinatario è offline, oppure il suo telefono è bloccato. I messaggi
+restano sul server, cifrati, e vengono recapitati quando quel dispositivo torna
+raggiungibile. Nessun messaggio va perso.</p>
+
+<h3>La notifica arriva ma il messaggio no</h3>
+<p>Succede a telefono bloccato: l'app non può leggere le proprie chiavi finché
+non sblocchi lo schermo, quindi avvisa senza poter scaricare il contenuto. Il
+messaggio compare pochi secondi dopo lo sblocco.</p>
+
+<h3>Non ricevo notifiche</h3>
+<p>Verifica in Impostazioni → Notifiche che siano attive per SacketChatty. Se
+hai negato il permesso al primo avvio, il sistema non lo richiede una seconda
+volta e va riattivato da lì.</p>
+
+<h2>Privacy e dati</h2>
+<p>Chi sviluppa l'app non gestisce alcun server e non riceve alcun dato: non c'è
+un archivio centrale da cui recuperare messaggi o account. Per cancellare i
+tuoi dati usa <strong>Elimina account</strong> dentro l'app, che li rimuove dal
+server a cui sei collegato. I dettagli sono nell'<a href="privacy.html">informativa
+sulla privacy</a>.</p>
+
+<h2>Scrivere a noi</h2>
+<p>Per assistenza, segnalazioni di sicurezza o richieste sui tuoi dati:
+<a href="mailto:tua@email.example">tua@email.example</a></p>
+<div class="card">
+  <p>Se segnali un problema, aiuta molto sapere: il modello di iPhone e la
+  versione di iOS, la versione dell'app (Impostazioni → Info), che cosa stavi
+  facendo, e se il problema si ripete. <strong>Non allegare mai la chiave di
+  accesso del tuo server</strong>: non serve a diagnosticare nulla e vale come
+  una password.</p>
+</div>
+<p>Le segnalazioni di sicurezza hanno la precedenza. Se pensi di aver trovato
+una vulnerabilità, scrivila senza pubblicarla altrove: riceverai una risposta.</p>
+
+<hr>
+
+<p class="lang">English</p>
+<h1>Support</h1>
+<p class="meta">Getting the app working, and what to do when it isn't.</p>
+
+<h2>You need a server</h2>
+<p>SacketChatty has no central service to sign up to: it connects to the server
+you point it at. On first launch it asks for three things, which the person
+running that server gives you: the <code>.onion</code> address, the port, and
+the access key starting with <code>descriptor:x25519:</code>. Without them the
+app has nowhere to connect — which is the same reason nobody but the server's
+operator knows it exists.</p>
+
+<h2>The first connection is slow</h2>
+<p>The first launch can take up to a minute before the sign-in screen appears,
+while Tor downloads the directory and builds its circuits. It happens once:
+later launches are much faster, because that directory is kept on the device.</p>
+
+<h2>Common problems</h2>
+<ul>
+  <li><strong>Stuck connecting</strong> — usually the network. Switch between
+  Wi-Fi and mobile data, then close the app from the app switcher and reopen it.</li>
+  <li><strong>No "Delivered" mark</strong> — the recipient is offline or their
+  phone is locked. Messages wait on the server, encrypted, and arrive when that
+  device is reachable again. Nothing is lost.</li>
+  <li><strong>Notification arrives but the message doesn't</strong> — this
+  happens while the phone is locked: the app cannot read its own keys until you
+  unlock, so it alerts you without being able to fetch the content. The message
+  appears seconds after unlocking.</li>
+  <li><strong>No notifications at all</strong> — check Settings → Notifications.
+  If the permission was denied on first launch, iOS does not ask again.</li>
+</ul>
+
+<h2>Privacy and data</h2>
+<p>The developer runs no server and receives no user data: there is no central
+store from which messages or accounts could be retrieved. To erase your data use
+<strong>Delete account</strong> inside the app, which removes it from the server
+you are connected to. See the <a href="privacy.html">privacy policy</a>.</p>
+
+<h2>Contact</h2>
+<p>For support, security reports or data requests:
+<a href="mailto:tua@email.example">tua@email.example</a></p>
+<p>When reporting a problem, include your iPhone model and iOS version, the app
+version (Settings → About), what you were doing, and whether it repeats.
+<strong>Never include your server's access key</strong> — it is a password, and
+it is not needed to diagnose anything.</p>
+
+</div>
+</body>
+</html>
